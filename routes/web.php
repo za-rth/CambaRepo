@@ -8,7 +8,7 @@ use App\Http\Controllers\Dashboard;
 //Auth::routes(['login' => false]);
 
 Route::get('/', function () {
-    return view('splash');
+    return view('splash.master');
 });
 Route::get('/welcome', function () {
     return view('welcome');
@@ -16,11 +16,9 @@ Route::get('/welcome', function () {
 
 Route::get('/login', [Authentications::class, 'authView'])->name('login');
 
-Route::get('/registration', [Authentications::class, 'registerView']);
+//Route::get('/register', [Authentications::class, 'registerView']);
 
-Route::post('/registration',[Authentications::class,'registerAll'])->name('registerAll');
-
-Route::get('/test',[Authentications::class,'loginEntry']);
+Route::post('/login/register',[Authentications::class,'registerAll'])->name('registerAll');
 Route::post('/login',[Authentications::class,'loginEntry'])->name('loginEnter');
 
 Route::get('/dashboard',[Dashboard::class,'main'])->name('dashboard');

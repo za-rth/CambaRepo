@@ -1,4 +1,4 @@
-@extends('splash')
+@extends('landingPage')
 @section('title','Dashboard')
 @section('content')
    
