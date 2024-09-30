@@ -16,6 +16,7 @@ Route::get('/welcome', function () {
 
 Route::get('/login', [Authentications::class, 'authView'])->name('login');
 
+
 //Route::get('/register', [Authentications::class, 'registerView']);
 
 Route::post('/login/register',[Authentications::class,'registerAll'])->name('registerAll');
@@ -23,3 +24,7 @@ Route::post('/login',[Authentications::class,'loginEntry'])->name('loginEnter');
 
 Route::get('/dashboard',[Dashboard::class,'main'])->name('dashboard');
 //Route::delete('/dashboard{id}',[Dashboard::class,'deleteAccount'])->name('dashboard.delete');
+
+Route::delete('/dashboard',[Dashboard::class,'deleteAccount'])->name('deleteAccount');
+
+Route::get('/dashboard/profile', [Dashboard::class, 'profile'])->name('dash-profile');

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use App\Models\Registers;
 use Illuminate\Http\Request;
+use Session;
 
 class Authentications extends Controller
 {
@@ -47,11 +48,10 @@ class Authentications extends Controller
         ->where('password', 'like', $data['password'])
         ->get();
         
-        
-        if ($query->isEmpty()) {
-            return back()->with('error', 'Invalid credentials');
+        if($query->isEmpty()) {
+            return redirect(route('login'))->with('error', 'Invalid Credentials');
         }
-
+       
         return redirect()->route('dashboard',['email'=>$query])->with('status', 'Login successful');
 
     }
