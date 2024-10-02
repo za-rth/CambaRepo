@@ -7,7 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <body>
     <div class="container-sm container-fluid mb-5 mt-5 d-flex col-md-5 justify-content-center shadow-lg p-3 mb-5 bg-white rounded">
-        <!--
+        
         <form method="post" action="{{route('registerAll')}}" style="width:500px" >
             @csrf
             @method('post')
@@ -27,7 +27,7 @@
                     <input type="text" class="form-control"  aria-describedby="" name="lastname" placeholder="Lastname">
                 </div>
             </div>
-            ####
+            
             <div class="row">
                 <div class="mb-3 form-group col-md-6">
                     <input type="date" class="form-control"  aria-describedby=""  name="birthdate" placeholder="Birthdate">
@@ -36,7 +36,7 @@
                     <input type="text" class="form-control"  aria-describedby="" name="country" placeholder="Country">
                 </div>
             </div>
-             ####
+            
             <div class="row">
                 <div class="form-group mb-3 col-md-6">
                     <input type="text" class="form-control"  aria-describedby="" name="nationality" placeholder="Nationality">
@@ -45,7 +45,7 @@
                     <input type="text" class="form-control"  aria-describedby="" name="state" placeholder="State/Region">
                 </div>
             </div>    
-            ###
+            
             <div class="row">
                 <div class="form-group mb-3 col-md-6">
                 <label  class="form-label">Zip Code</label>
@@ -62,7 +62,7 @@
                     </select>
                 </div>
             </div>    
-          ###
+          
             <div class="row">
                 <div class="mb-3 form-group mb-3 col-md-6">
                     <label class="form-label">User Type</label>
@@ -79,16 +79,16 @@
                             Must be 8-20 characters long.
                         </span>
                     </div>
-                  ###
+                  
                     <div class="mb-3 form-group mb-3 col-md-8">
                         <label class="form-label">Re-enter Password</label>
                         <input type="password" class="form-control" id="exampleInputPassword1" name="password">
-                    </div>##
+                    </div>
                 </div>
                 
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
-        </form>-->
+        </form>
     </div>
     </body>
 @endsection 

@@ -1,4 +1,5 @@
-@extends('landingPage')
+<!--/dashboard-->
+@extends('dashboard.dashboardLanding')
 @section('title', 'Dashboard')
 @section('content')
 
@@ -17,9 +18,9 @@
         position: absolute;
         left: -100%;
         top: ;
-        width: 100px;
+        width: 250px;
         height: 100%;
-        background-color: blue;
+        background-color: aquamarine;
         /* Adjust background color as needed */
         transition: left 0.3s ease-in-out;
     }
@@ -41,14 +42,14 @@
 
 <body>
     <header>WELCOME</header>
-    <div class="content container-fluid">
+    <div class="content container-fluid" >
         <div class="row">
             <div class="col-md-2">
                 <div class="hover-panel">
                     <div class="panel-content">
-                        <div class="" style="width:100px">
-                            <h2 style="color: white; text-align: center;">Sliding Panel</h2>
-                            <p style="color: white; padding: 20px;">Manage Account</p>
+                        <div class="content padding" style="width:100px">
+                            <h2 style="color: white; text-align: center;">USERNAME</h2>
+                            <p style="color: white; padding: 20px;">EDIT PROFILE</p>
                             <form method="DELETE" action="{{route('deleteAccount')}}"
                                 onsubmit="return confirm('Are you sure you want to delete this user?');">
                                 @csrf
@@ -71,7 +72,7 @@
                                 <a href="#"><ul>FOLLOWING</ul></a>
                             </div>
                             <div class="container">
-                                <a href="#"><ul>PROFILE</ul></a>
+                                <a href="#"><ul>LOGOUT</ul></a>
                             </div>
                             
                         </div>
