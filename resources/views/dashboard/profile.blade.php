@@ -1,3 +1,4 @@
+<!--/dashboard/profile route-->
 @extends('dashboard.dashboardLanding')
 
 @section('title','Profile')
