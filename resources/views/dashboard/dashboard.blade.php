@@ -7,28 +7,7 @@
 
 
 <html lang="en">
-<style>
-    .hover-panel {
-        position: relative;
-        height: 100vh;
-        overflow: hidden;
-    }
 
-    .hover-panel .panel-content {
-        position: absolute;
-        left: -100%;
-        top: ;
-        width: 250px;
-        height: 100%;
-        background-color: aquamarine;
-        /* Adjust background color as needed */
-        transition: left 0.3s ease-in-out;
-    }
-
-    .hover-panel:hover .panel-content {
-        left: 0;
-    }
-</style>
 
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,53 +20,55 @@
 </head>
 
 <body>
-    <header>WELCOME</header>
-    <div class="content container-fluid" >
-        <div class="row">
-            <div class="col-md-2">
-                <div class="hover-panel">
-                    <div class="panel-content">
-                        <div class="content padding" style="width:100px">
-                            <h2 style="color: white; text-align: center;">USERNAME</h2>
-                            <p style="color: white; padding: 20px;">EDIT PROFILE</p>
-                            <form method="DELETE" action="{{route('deleteAccount')}}"
-                                onsubmit="return confirm('Are you sure you want to delete this user?');">
-                                @csrf
-                                @method('DELETE')
-                                <div>
-                                    <button type="submit" class="btn btn-danger">DELETE ACCOUNT</button>
-                                </div>
-                            </form>
-                            
-                            <div class="container">
-                                <a href="{{route('dash-profile')}}"><ul>PROFILE</ul></a>
-                            </div>
-                            <div class="container ">
-                                <a href="#"><ul>NOTIFICATIONS</ul></a>
-                            </div>
-                            <div class="container">
-                                <a href="#"><ul>SAVED</ul></a>
-                            </div>
-                            <div class="container">
-                                <a href="#"><ul>FOLLOWING</ul></a>
-                            </div>
-                            <div class="container">
-                                <a href="#"><ul>LOGOUT</ul></a>
-                            </div>
-                            
-                        </div>
-                    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+
+<header class="contaier navbar navbar-expand-lg navbar-light " style="font-family: 'Roboto Mono', monospace; font-weight: 100;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="{{asset('/images/CAMBa.png')}}" width="125">
+    </a>
+    <div class="input-group">
+        <div class="form-outline" data-mdb-input-init>
+            <input type="search" id="form1" placeholder="Search"class="form-control" />
+            
+        </div>
+        <button type="button" class="btn btn-primary" data-mdb-ripple-init>
+            <i class="">&#x1F50D;</i>
+        </button>
+    </div>
+  </div>
+</header>
+
+
+
+<div>
+  <div class="row align-items-start p-2 m-2 position-relative">
+    <div class="col-3 vh-100 p-2 m-2" style="background-color:#E8CAFB;">
+        <div class="container p-2 mx-auto ">
+            <div class="col align-items-start "> 
+                <div class="col left-content position-absolute " style="background-color:#ffffff;"> <!--LEFT-->
+                    <h5>IMAGE</h5>
+                </div> 
+                <div class="col position-absolute start-30 " style="background-color:#ffffff;"><!--RIGHT-->
+                    <h6>USER NAME</h6>
+                    <h7>Fullname</h7>
                 </div>
             </div>
         </div>
+      
     </div>
+    <div class="col-6  vh-100 p-2 m-2" style="background-color:#E8CAFB;">
+      Three of three columns
+    </div>
+    <div class="col-2 vh-100 p-2 m-2" style="background-color:#E8CAFB;">
+      Three of three columns
+    </div>
+  </div>
+</div>  
+
 
     
-  
-       
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
